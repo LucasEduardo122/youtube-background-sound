@@ -6,7 +6,7 @@ import Videos from "@/components/videos";
 import MenuComponentAmbients from "@/components/menuAmbients";
 
 export default function Home() {
-  const [useSond, useSetSond] = useState<string>("jfKfPfyJRdk")
+  const [useSond, setSond] = useState<string>("jfKfPfyJRdk")
   const [player, setPlayer] = useState<any>(null);
   const [menu, setMenu] = useState<boolean>(false);
   const [menuAmbients, setMenuAmbients] = useState<boolean>(false);
@@ -194,7 +194,7 @@ export default function Home() {
 
   function changeSond(id: string) {
     if (id !== useSond) {
-      useSetSond(id)
+      setSond(id)
       toogleMenu();
     }
   }
